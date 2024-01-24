@@ -1,0 +1,35 @@
+ <!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Using Axios</title>
+</head>
+
+<body>
+  <h1>Using Axios</h1>
+  <section>
+    <h2>Here are the users:</h2>
+  </section>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.6.5/axios.min.js"
+    integrity="sha512-TjBzDQIDnc6pWyeM1bhMnDxtWH0QpOXMcVooglXrali/Tj7W569/wd4E8EDjk1CwOAOPSJon1VfcEt1BI4xIrA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script>
+    const baseURL = 'https://testing-apis-postman.herokuapp.com'
+    // [GET] /api/users
+    //  console.log(axios);  // 1st check, make sure it's working with AXIOS 
+    // [POST]/api/users 
+    
+    // axios.post(`${baseURL}/api/users`, {name: 'a', bio: 'b'})   // when you using POST, there will be newly created user
+    axios.get(`${baseURL}/api/users`)
+    .then(res => {
+      console.log(res.data);
+    })
+    .catch(error => {
+      console.log(error);
+    })
+  </script>
+</body>
+
+</html> -->
